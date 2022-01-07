@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #eee;
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+}
+.container .add-task-box {
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+}
+.container .add-task-box input {
+  width: 300px;
+  height: 100%;
+  margin: 0 10px;
+  flex-grow: 1;
+}
+/* @media (max-width: 779px) {
+  .container .add-task-box input {
+    width: unset;
+    margin: 0;
+  }
+} */
+.container .add-task-box button {
+  background-color: red;
+  margin: 0 10px;
+  height: 100%;
+  width: 135px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+/* @media (max-width: 779px) {
+  .container .add-task-box button {
+    width: unset;
+    font-size: 0.7em;
+  }
+} */
+.container .add-task-box button:active {
+  filter: brightness(0.7);
+}
+
+.container .items-box {
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.container .items-box .task-item {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  background-color: #009688;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  padding: 10px 10px;
+}
+.delete-btn {
+  border-radius: 4px;
+  background-color: red;
+}
+.delete-btn:active {
+  filter: brightness(0.7);
+}
