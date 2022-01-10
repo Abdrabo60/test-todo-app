@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
+  scroll-behavior: smooth;
 }
 .container {
   background-color: #eee;
@@ -10,62 +12,64 @@
   width: 80%;
 }
 .container .add-task-box {
-  margin: 0 auto;
-  height: 50px;
+  background-color: #eee;
+  margin: auto;
+  padding: 10px;
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  justify-content: center;
 }
 .container .add-task-box input {
-  width: 300px;
-  height: 100%;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   flex-grow: 1;
+  /* background-color: #eee; */
 }
-/* @media (max-width: 779px) {
-  .container .add-task-box input {
-    width: unset;
-    margin: 0;
-  }
-} */
+
 .container .add-task-box button {
   background-color: red;
-  margin: 0 10px;
-  height: 100%;
-  width: 135px;
+  padding: 10px;
   border: none;
   border-radius: 10px;
   color: white;
   font-size: 1.3em;
   font-weight: bold;
 }
-/* @media (max-width: 779px) {
-  .container .add-task-box button {
-    width: unset;
-    font-size: 0.7em;
-  }
-} */
+
 .container .add-task-box button:active {
   filter: brightness(0.7);
 }
 
 .container .items-box {
-  margin: 0 auto;
-  padding: 10px 0;
+  margin: auto;
+  /* padding: 10px 0; */
 }
 .container .items-box .task-item {
-  text-align: center;
   color: white;
   font-size: 1.5em;
   font-family: sans-serif;
   background-color: #009688;
-  margin: 5px 0;
+  margin: 10px 0 0 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   user-select: none;
-  padding: 10px 10px;
+  padding: 10px;
 }
+@media (max-width: 779px) {
+  .container .items-box .task-item {
+    font-size: 0.7em;
+  }
+}
+.container .items-box .task-item:active {
+  filter: brightness(0.7);
+}
+
 .delete-btn {
   border-radius: 4px;
   background-color: red;
+  padding: 10px;
 }
 .delete-btn:active {
   filter: brightness(0.7);

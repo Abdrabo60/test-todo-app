@@ -38,6 +38,9 @@ function appendTask(task) {
   element.append(text);
   itemsBox.appendChild(element);
 
+  // move scroll to element y
+  scrollTo(0, element.offsetTop);
+
   // add delete btn
   let delElement = document.createElement("span");
   delElement.classList.add("delete-btn");
@@ -51,3 +54,19 @@ function appendTask(task) {
     element.remove();
   };
 }
+
+taskField.onfocus = () => {
+  taskField.setAttribute(
+    "placeholder-data",
+    taskField.getAttribute("placeholder")
+  );
+  taskField.setAttribute("placeholder", "");
+};
+
+taskField.onblur = () => {
+  taskField.setAttribute(
+    "placeholder",
+    taskField.getAttribute("placeholder-data")
+  );
+  taskField.removeAttribute("placeholder-data");
+};
